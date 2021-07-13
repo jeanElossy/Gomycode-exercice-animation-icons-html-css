@@ -20,8 +20,9 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
+
+/*-----------------------------------------le style initial---------------------------------*/
 .container--icons{
   display: flex;
 }
@@ -128,7 +129,7 @@ body{
   left: 15%;
 }
 
-
+/*--------------------------------le responsive design-----------------------------------------*/
 @media screen and (max-width: 400px){
   .container--icons{
     display: flex;
