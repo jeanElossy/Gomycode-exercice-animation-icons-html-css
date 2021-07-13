@@ -1,0 +1,146 @@
+:root{
+  --white: #f1f1f1;
+  --whatsapp: rgb(34, 150, 34);
+  --twitter: rgb(101, 206, 255);
+  --github: #333;
+  --youtube: rgb(252, 5, 5);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*, ::after, ::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: var(--white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.container--icons{
+  display: flex;
+}
+.container--icons__contents{
+  width: 78px;
+  height: 78px;
+  margin: 10px;
+  border-radius: 50%;
+  font-size: 2.2em;
+  padding: 1.5rem 1.3rem;
+  cursor: pointer;
+  box-shadow: 0px 0px 6px rgba(0,0,0,0.2);
+  transition: .6s ease;
+  position: relative;
+  transition: .3s ease;
+}
+.fa-whatsapp{
+  padding-left: 0.2rem;
+}
+
+.container--icons__contents:hover{
+  transform: scale(1.1);
+  box-shadow: 0px 0px 8px rgba(0,0,0,0.4);
+}
+.card{
+  width: 100px;
+  height: 50px;
+  padding: 12px 5px;
+  text-align: center;
+  border-radius: 25px;
+  font-size: 0.5em;
+  position: absolute;
+  top: 50%;
+  left: -10%;
+  transition: .5s ease;
+  opacity: 0;
+  visibility: hidden;
+  font-family: 'Comfortaa', cursive;
+  font-weight: bold;
+}
+.container--icons__contents__message--whatsapp{
+  background: var(--whatsapp);
+}
+.container--icons__contents__message--twitter{
+  background: var(--twitter);
+}
+.container--icons__contents__message--github{
+  padding: 13px 15px;
+  background: var(--github);
+}
+.container--icons__contents__message--youtube{
+  padding: 13px;
+  background: var(--youtube);
+}
+
+
+.container--icons__contents--whatsapp:hover{
+  background: var(--whatsapp);
+  color: var(--white);
+}
+.container--icons__contents--twitter:hover{
+  background: var(--twitter);
+  color: var(--white);
+}
+.container--icons__contents--github:hover{
+  background: var(--github);
+  color: var(--white);
+}
+.container--icons__contents--youtube:hover{
+  background: var(--youtube);
+  color: var(--white);
+}
+
+.cardhover:hover .card{
+  position: absolute;
+  top: -120%;
+  visibility: visible;
+  opacity: 1;
+  color: var(--white);
+}
+
+.triangle{
+  width: 0px;
+  height: 0px;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent; 
+  position: absolute;
+  top: 80%;
+}
+.container--icons__contents__message--youtube__triangle{
+  border-top: 20px solid var(--youtube);
+}
+.container--icons__contents__message--github__triangle{
+  border-top: 20px solid var(--github);
+}
+.container--icons__contents__message--twitter__triangle{
+  border-top: 20px solid var(--twitter);
+}
+.container--icons__contents__message--whatsapp__triangle{
+  border-top: 20px solid var(--whatsapp);
+}
+.whatsapp--twitter{
+  left: 15%;
+}
+
+
+@media screen and (max-width: 400px){
+  .container--icons{
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+  position: absolute;
+  right: 20%;
+  left: 120%;
+  }
+  .cardhover:hover .card{
+    position: absolute;
+    right: 100%;
+  }
+}
