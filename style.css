@@ -78,7 +78,6 @@ body{
   background: var(--youtube);
 }
 
-
 .container--icons__contents--whatsapp:hover{
   background: var(--whatsapp);
   color: var(--white);
@@ -131,6 +130,9 @@ body{
 
 /*--------------------------------le responsive design-----------------------------------------*/
 @media screen and (max-width: 400px){
+  body{
+    overflow-x: hidden;
+  }
   .container--icons{
     display: flex;
     flex-direction: column;
